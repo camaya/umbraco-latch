@@ -1,0 +1,47 @@
+﻿<div ng-controller="Latch.Settings.ApplicationController as latchApp">
+
+    <umb-load-indicator ng-if="!latchApp.loaded"></umb-load-indicator>
+
+    <form name="applicationForm"
+        ng-show="latchApp.page.loaded"
+        ng-submit="latchApp.save(applicationForm)"
+        val-form-manager
+        novalidate>
+        <umb-panel>
+            <umb-header>
+                <div class="span4">
+                    <h1 class="headline"><localize key="latch_application_title">Application Settings</localize></h1>
+                </div>
+            </umb-header>
+
+            <div class="umb-panel-body row-fluid">
+                <div class="tab-content form-horizontal" style="padding-bottom: 90px">
+                    <div class="umb-pane">
+
+                        <umb-control-group label="@latch_application_appIdLabel" description="@latch_application_appIdDescription">
+                            <input class="latch-input" type="text" name="appId" ng-model="latchApp.data.applicationId" required no-dirty-check>
+                        </umb-control-group>
+
+                        <umb-control-group label="@latch_application_secretLabel" description="@latch_application_secretDescription">
+                            <input class="latch-input" type="text" name="secret" ng-model="latchApp.data.secret" required no-dirty-check>
+                        </umb-control-group>
+
+                        <div class="umb-tab-buttons">
+                            <umb-button
+                                type="submit"
+                                action="latchApp.save(applicationForm)"
+                                state="latchApp.page.saveButtonState"
+                                button-style="success"
+                                shortcut="ctrl+s"
+                                label="Save"
+                                label-key="buttons_save">
+                            </umb-button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </umb-panel>
+    </form>
+</div>

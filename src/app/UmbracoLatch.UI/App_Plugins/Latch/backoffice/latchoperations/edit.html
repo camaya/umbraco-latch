@@ -1,0 +1,93 @@
+﻿<div ng-controller="Latch.Operations.EditController as latchOperation">
+    <form name="operationForm"
+          ng-show="latchOperation.page.loaded"
+          ng-submit="latchOperation.save(operationForm)"
+          novalidate>
+
+        <umb-panel>
+            <umb-header>
+
+                <div class="span7">
+                    <umb-content-name placeholder="@placeholders_entername"
+                                      ng-model="latchOperation.data.name">
+                </div>
+
+            </umb-header>
+            <div class="umb-panel-body row-fluid">
+                <div class="tab-content form-horizontal">
+                    <div class="umb-pane show-validation-errors">
+
+                        <div ng-class="{'invalid-value': operationForm.operationType.$error.required}">
+                            <umb-control-group label="@latch_operation_typeLabel" description="@latch_operation_typeDescription">
+                                <select name="operationType"
+                                    ng-options="operation.name for operation in latchOperation.data.types track by operation.id"
+                                    ng-model="latchOperation.data.selectedType"
+                                    ng-change="latchOperation.configureActions()" required>
+                                    <option value="" selected>
+                                        <localize key="latch_operation_chooseType">-- Choose type --</localize>
+                                    </option>
+                                </select>
+                            </umb-control-group>
+                        </div>
+
+                        <div ng-if="latchOperation.data.showActions"
+                            ng-class="{'invalid-value': operationForm.operationAction.$error.required}">
+                            <umb-control-group  label="@latch_operation_actionLabel" description="@latch_operation_actionDescription">
+                                <select name="operationAction"
+                                    ng-options="action.name for action in latchOperation.data.actions track by action.id"
+                                    ng-model="latchOperation.data.selectedAction"
+                                    ng-change="latchOperation.configureNodeOptions()" required>
+                                    <option value="" selected>
+                                        <localize key="latch_operation_chooseAction">-- Choose action --</localize>
+                                    </option>
+                                </select>
+                            </umb-control-group>
+                        </div>
+
+                        <div ng-show="latchOperation.data.typeSelected">
+                            <umb-control-group label="@latch_operation_applyToAllUsersLabel" description="@latch_operation_applyToAllUsersDescription">
+                                <input type="checkbox" ng-model="latchOperation.data.applyToAllUsers">
+                            </umb-control-group>
+                        </div>
+
+                        <div ng-if="latchOperation.data.typeSelected && !latchOperation.data.applyToAllUsers"
+                             ng-class="{'invalid-value': latchOperation.data.invalidUsers}">
+                            <umb-property property="property"
+                                ng-repeat="property in latchOperation.usersProperties">
+                                <umb-property-editor model="property"></umb-property-editor>
+                            </umb-property>
+                        </div>
+
+                        <div ng-if="latchOperation.data.showNodesOptions">
+                            <umb-control-group label="@latch_operation_applyToAllNodesLabel" description="@latch_operation_applyToAllNodesDescription">
+                                <input type="checkbox" ng-model="latchOperation.data.applyToAllNodes">
+                            </umb-control-group>
+                        </div>
+
+                        <div ng-if="latchOperation.data.showNodesOptions && !latchOperation.data.applyToAllNodes"
+                            ng-class="{'invalid-value': latchOperation.data.invalidNodes}">
+                            <umb-property property="property" ng-repeat="property in latchOperation.contentProperties">
+                                <umb-property-editor model="property"></umb-property-editor>
+                            </umb-property>
+                        </div>
+
+                        <div class="umb-tab-buttons">
+                            <umb-button
+                                type="submit"
+                                action="latchOperation.save(operationForm)"
+                                state="latchOperation.page.saveButtonState"
+                                button-style="success"
+                                shortcut="ctrl+s"
+                                label="Save"
+                                label-key="buttons_save">
+                            </umb-button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </umb-panel>
+    </form>
+
+</div>
+

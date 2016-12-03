@@ -1,0 +1,40 @@
+﻿<div class="umb-panel" ng-controller="Latch.Dialogs.UsersController as users">
+    <div class="umb-panel-body with-footer">
+
+        <div class="tab-content umb-control-group">
+            <div ng-animate="'tree-fade-out'">
+                <umb-tree section="{{users.tree.section}}"
+                          treealias="{{users.tree.alias}}"
+                          hideheader="{{users.tree.hideHeader}}"
+                          hideoptions="true"
+                          isdialog="true"
+                          customtreeparams="{{users.tree.customParams}}"
+                          eventhandler="users.tree.handler"
+                          enablelistviewsearch="false"
+                          enablecheckboxes="{{users.tree.multiPicker}}">
+                </umb-tree>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="umb-panel-footer">
+        <div class="umb-el-wrap umb-panel-buttons">
+            <div class="btn-toolbar umb-btn-toolbar pull-right">
+
+                <a href ng-click="close()" class="btn btn-link">
+                    <localize key="general_cancel">Cancel</localize>
+                </a>
+
+                <button class="btn btn-primary"
+                        ng-click="users.select()">
+                    <localize key="buttons_select">Select</localize>
+                    ({{dialogData.selection.length}})
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>

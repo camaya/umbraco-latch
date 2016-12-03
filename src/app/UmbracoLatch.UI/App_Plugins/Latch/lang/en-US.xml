@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="en" intName="English (US)" localName="English (US)" lcid="" culture="en-US">
+  <creator>
+    <name>Cristhian Amaya</name>
+    <link>http://camaya.co</link>
+  </creator>
+  <area alias="sections">
+    <key alias="latch">Latch</key>
+  </area>
+  <area alias="treeHeaders">
+    <key alias="latchSettings">Settings</key>
+    <key alias="latchOperations">Operations</key>
+  </area>
+  <area alias="latch_common">
+    <key alias="error">There was an error during the operation, try again or contact the administrator.</key>
+    <key alias="minAdd">You need to add at least</key>
+    <key alias="items">items.</key>
+    <key alias="deleteConfirmation">Are you sure you want to delete</key>
+  </area>
+  <area alias="latch_settingsTree">
+    <key alias="pairing">Pairing</key>
+    <key alias="application">Application</key>
+  </area>
+  <area alias="latch_pairing">
+    <key alias="title">Pairing Settings</key>
+    <key alias="tokenLabel">Pairing Code</key>
+    <key alias="tokenDescription">Enter the code you generated on the Latch app.</key>
+    <key alias="pairButton">Pair</key>
+    <key alias="accountIdLabel">Account Id</key>
+    <key alias="accountIdDescription">Your account is already paired.</key>
+    <key alias="unpairButton">Unpair</key>
+    <key alias="error205">Account and application already paired.</key>
+    <key alias="error206">Pairing token not found or expired</key>
+    <key alias="error401">Missing parameter in API call</key>
+    <key alias="pairError">There was a problem pairing your account, please try again or contact your administrator.</key>
+    <key alias="pairSuccess">Account paired successfully.</key>
+    <key alias="unpairSuccess">Account unpaired successfully.</key>
+    <key alias="alreadyUnpaired">This account already unpaired.</key>
+  </area>
+  <area alias="latch_application">
+    <key alias="title">Application Settings</key>
+    <key alias="appIdLabel">Application ID</key>
+    <key alias="appIdDescription">Enter the application id value you find on the Latch website.</key>
+    <key alias="secretLabel">Secret</key>
+    <key alias="secretDescription">Enter the secret value you find on the Latch website.</key>
+    <key alias="addSuccess">Application configured successfully.</key>
+  </area>
+  <area alias="latch_operation">
+    <key alias="defaultName">Login All</key>
+    <key alias="typeLabel">Type</key>
+    <key alias="typeDescription">Select the type of operation you want to latch.</key>
+    <key alias="chooseType">-- Choose type --</key>
+    <key alias="loginType">Login</key>
+    <key alias="contentType">Content</key>
+    <key alias="mediaType">Media</key>
+    <key alias="dictionaryType">Dictionary</key>
+    <key alias="actionLabel">Action</key>
+    <key alias="actionDescription">Select the action you want to latch.</key>
+    <key alias="chooseAction">-- Choose action --</key>
+    <key alias="createAction">Create</key>
+    <key alias="editAction">Edit</key>
+    <key alias="deleteAction">Delete</key>
+    <key alias="publishAction">Publish</key>
+    <key alias="unpublishAction">Unpublish</key>
+    <key alias="applyToAllUsersLabel">Apply to all users</key>
+    <key alias="applyToAllUsersDescription">This operation will be applied to every user.</key>
+    <key alias="usersLabel">Users</key>
+    <key alias="usersDescription">Select the users you want to apply this operation.</key>
+    <key alias="applyToAllNodesLabel">Apply to all nodes</key>
+    <key alias="applyToAllNodesDescription">This operation will be applied to every node.</key>
+    <key alias="nodesLabel">Nodes</key>
+    <key alias="nodesDescription">Select the nodes you want to apply this operation.</key>
+    <key alias="error301">Application or operation not found.</key>
+    <key alias="error401">Missing parameter in API call.</key>
+    <key alias="error703">Application or operation not created due to subscription limits.</key>
+    <key alias="accountUnpaired">You cannnot create any operation without pairing your Latch account before.</key>
+    <key alias="createError">There was a problem creating the operation, please try again or contact your administrator.</key>
+    <key alias="createSuccess">Operation created successfully.</key>
+    <key alias="notFound">Operation not found.</key>
+    <key alias="editSuccess">Operation updated successfully.</key>
+  </area>
+  <area alias="latch_checkers">
+    <key alias="contentPublish">The publish action is locked on this node.</key>
+    <key alias="contentUnpublish">The unpublish action is locked on this node.</key>
+    <key alias="contentUnpublishChildren">The unpublish action is locked on one or more children nodes.</key>
+    <key alias="contentDelete">The delete action is locked on this node.</key>
+    <key alias="contentDeleteChildren">The delete action is locked on one or more children nodes.</key>
+    <key alias="mediaDelete">The delete action is locked for media items.</key>
+    <key alias="dictionaryDelete">The delete action is locked for dictionary items.</key>
+  </area>
+</language>

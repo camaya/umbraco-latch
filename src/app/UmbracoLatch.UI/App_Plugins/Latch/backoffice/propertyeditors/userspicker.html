@@ -1,0 +1,36 @@
+﻿<div class="umb-editor umb-contentpicker" ng-controller="Latch.PropertyEditors.UsersPickerController as usersPicker">
+
+    <form name="usersPickerForm">
+
+        <ul class="unstyled list-icons"
+            ui-sortable
+            ng-model="model.value">
+            <li ng-repeat="user in model.value track by $index">
+                <i class="icon icon-navigation handle"></i>
+
+                <a href="#" ng-click="usersPicker.remove($index)" prevent-default>
+                    <i class="icon icon-delete red hover-show"></i>
+                    <i class="icon-user hover-hide"></i>
+                    {{user.name}}
+                </a>
+            </li>
+        </ul>
+
+        <ul class="unstyled list-icons">
+            <li>
+                <i class="icon icon-add blue"></i>
+                <a href="#" ng-click="usersPicker.openDialog()" prevent-default>
+                    <localize key="general_add">Add</localize>
+                </a>
+            </li>
+        </ul>
+
+        <input type="hidden" name="minCount" ng-model="model.value" />
+
+        <div class="help-inline" val-msg-for="minCount" val-toggle-msg="minCount">
+            <localize key="latch_common_minAdd">You need to add at least</localize> {{model.config.minNumber}} <localize key="latch_common_items">items</localize>
+        </div>
+
+    </form>
+
+</div>

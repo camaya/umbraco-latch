@@ -1,0 +1,12 @@
+{
+  "name": "umbraco-latch",
+  "version": "1.0.0",
+  "author": "Cristhian Amaya",
+  "license": "LGPL 2.1",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-umbraco-package": "^1.0.0"
+  }
+}

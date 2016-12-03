@@ -1,0 +1,18 @@
+﻿<div class="umb-pane" ng-controller="Latch.Operations.DeleteController as deleteOperation">
+
+    <p>
+        <localize key="latch_common_deleteConfirmation">Are you sure you want to delete</localize> <strong>{{currentNode.name}}</strong>?
+    </p>
+
+    <div class="umb-pane btn-toolbar umb-btn-toolbar">
+        <div class="control-group umb-control-group">
+            <a href="" ng-click="deleteOperation.cancel()" class="btn btn-link">
+                <localize key="general_cancel">Cancel</localize>
+            </a>
+            <a href="" ng-click="deleteOperation.remove(currentNode.id)" class="btn btn-primary">
+                <localize key="general_ok">OK</localize>
+            </a>
+        </div>
+    </div>
+
+</div>

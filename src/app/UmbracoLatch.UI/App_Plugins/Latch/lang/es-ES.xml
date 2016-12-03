@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="es" intName="Spanish" localName="español" lcid="10" culture="es-ES">
+  <creator>
+    <name>Cristhian Amaya</name>
+    <link>http://camaya.co</link>
+  </creator>
+  <area alias="sections">
+    <key alias="latch">Latch</key>
+  </area>
+  <area alias="treeHeaders">
+    <key alias="latchSettings">Ajustes</key>
+    <key alias="latchOperations">Operaciones</key>
+  </area>
+  <area alias="latch_common">
+    <key alias="error">Hubo un error en la operación, inténtalo de nuevo o contacta el administrador.</key>
+    <key alias="minAdd">Necesitas añadir al menos</key>
+    <key alias="items">elementos</key>
+    <key alias="deleteConfirmation">¿Estas seguro que quieres eliminar</key>
+  </area>
+  <area alias="latch_settingsTree">
+    <key alias="pairing">Pareo</key>
+    <key alias="application">Aplicación</key>
+  </area>
+  <area alias="latch_pairing">
+    <key alias="title">Ajustes de pareo</key>
+    <key alias="tokenLabel">Código de pareo</key>
+    <key alias="tokenDescription">Introduce el código que generaste en la app de Latch.</key>
+    <key alias="pairButton">Parear</key>
+    <key alias="accountIdLabel">Id de cuenta</key>
+    <key alias="accountIdDescription">Tu cuenta ya está pareada.</key>
+    <key alias="unpairButton">Desparear</key>
+    <key alias="error205">Tu cuenta y aplicación ya están pareadas.</key>
+    <key alias="error206">No se ha encontrado el token de pareo o ha expirado.</key>
+    <key alias="error401">Falta algún parámetro en la llamada a la API.</key>
+    <key alias="pairError">Hubo algún problema al intentar parear tu cuenta, por favor inténtalo de nuevo o contacta el administrador.</key>
+    <key alias="pairSuccess">Cuenta pareada correctamente.</key>
+    <key alias="unpairSuccess">Cuenta despareada correctamente.</key>
+    <key alias="alreadyUnpaired">Esta cuenta ya ha sido despareada.</key>
+  </area>
+  <area alias="latch_application">
+    <key alias="title">Ajustes de aplicación</key>
+    <key alias="appIdLabel">Id de aplicación</key>
+    <key alias="appIdDescription">Introduce el id de aplicación que encuentras en la web de Latch.</key>
+    <key alias="secretLabel">Secreto</key>
+    <key alias="secretDescription">Introduce el secreto que encuentras en la web de Latch.</key>
+    <key alias="addSuccess">Aplicación configurada correctamente.</key>
+  </area>
+  <area alias="latch_operation">
+    <key alias="defaultName">Login Todos</key>
+    <key alias="typeLabel">Tipo</key>
+    <key alias="typeDescription">Selecciona el tipo de operación que quieres latchear.</key>
+    <key alias="chooseType">-- Selecciona un tipo --</key>
+    <key alias="loginType">Login</key>
+    <key alias="contentType">Contenido</key>
+    <key alias="mediaType">Media</key>
+    <key alias="dictionaryType">Diccionario</key>
+    <key alias="actionLabel">Acción</key>
+    <key alias="actionDescription">Selecciona la acción que quieres latchear.</key>
+    <key alias="chooseAction">-- Selecciona una acción --</key>
+    <key alias="createAction">Crear</key>
+    <key alias="editAction">Editar</key>
+    <key alias="deleteAction">Eliminar</key>
+    <key alias="publishAction">Publicar</key>
+    <key alias="unpublishAction">Despublicar</key>
+    <key alias="applyToAllUsersLabel">Aplicar a todos los usuarios</key>
+    <key alias="applyToAllUsersDescription">Esta operación será aplicada a tods los usuarios.</key>
+    <key alias="usersLabel">Usuarios</key>
+    <key alias="usersDescription">Selecciona los usuarios a los que se aplicará esta operación.</key>
+    <key alias="applyToAllNodesLabel">Aplicar a todos los nodos</key>
+    <key alias="applyToAllNodesDescription">Esta operación será aplicada a todos los nodos.</key>
+    <key alias="nodesLabel">Nodos</key>
+    <key alias="nodesDescription">Selecciona los nodos a los que se aplicará esta operación.</key>
+    <key alias="error301">Aplicación u operación no encontrada.</key>
+    <key alias="error401">Falta algún parámetro en la llamada a la API.</key>
+    <key alias="error703">Aplicación u operación no creada debito a los límites de la suscripción.</key>
+    <key alias="accountUnpaired">No puedes crear ninguna operación si no has pareado tu cuenta de Latch.</key>
+    <key alias="createError">Hubo algún problema al intentar crear la opearación, por favor inténtalo de nuevo or contacta con el administrador.</key>
+    <key alias="createSuccess">Operación creada correctamente.</key>
+    <key alias="notFound">Operación no encontrada.</key>
+    <key alias="editSuccess">Operación actualizada correctamente.</key>
+  </area>
+  <area alias="latch_checkers">
+    <key alias="contentPublish">La acción publicar está bloqueada en este nodo.</key>
+    <key alias="contentUnpublish">La acción despublicar está bloqueada en este nodo.</key>
+    <key alias="contentUnpublishChildren">La acción despublicar está bloqueada en uno o más nodos hijos.</key>
+    <key alias="contentDelete">La acción eliminar esta bloqueada en este nodo.</key>
+    <key alias="contentDeleteChildren">La acción eliminar esta bloqueada en uno o más nodos hijos.</key>
+    <key alias="mediaDelete">La acción eliminar esta bloqueada para los elementos multimedia.</key>
+    <key alias="dictionaryDelete">La acción eliminar esta bloqueada para los elementos del diccionario.</key>
+  </area>
+</language>

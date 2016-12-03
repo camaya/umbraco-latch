@@ -1,0 +1,67 @@
+﻿<div ng-controller="Latch.Settings.PairingController as latchPairing">
+
+    <umb-load-indicator ng-if="!latchPairing.data.loaded"></umb-load-indicator>
+
+    <umb-panel>
+        <umb-header>
+            <div class="span4">
+                <h1 class="headline"><localize key="latch_pairing_title">Pairing Settings</localize></h1>
+            </div>
+        </umb-header>
+
+        <div class="umb-panel-body row-fluid">
+            <div class="tab-content form-horizontal">
+                <div class="umb-pane">
+
+                    <form name="pairingForm"
+                        ng-show="latchPairing.page.loaded && !latchPairing.data.isPaired"
+                        ng-submit="latchPairing.pair(pairingForm)"
+                        val-form-manager
+                        novalidate>
+
+                        <umb-control-group label="@latch_pairing_tokenLabel" description="@latch_pairing_tokenDescription">
+                            <input class="latch-input" type="text" name="token" ng-model="latchPairing.data.token" required no-dirty-check>
+                        </umb-control-group>
+
+                        <div class="umb-tab-buttons">
+                            <umb-button
+                                type="submit"
+                                action="latchPairing.pair()"
+                                state="latchPairing.page.pairButtonState"
+                                button-style="success"
+                                shortcut="ctrl+s"
+                                label="Pair"
+                                label-key="latch_pairing_pairButton">
+                            </umb-button>
+                        </div>
+                    </form>
+
+                    <form name="unpairingForm"
+                        ng-show="latchPairing.page.loaded && latchPairing.data.isPaired"
+                        ng-submit="latchPairing.unpair(unpairingForm)"
+                        val-form-manager
+                        novalidate>
+
+                        <umb-control-group label="@latch_pairing_accountIdLabel" description="@latch_pairing_accountIdDescription">
+                            <strong>{{latchPairing.data.accountId}}</strong>
+                        </umb-control-group>
+
+                        <div class="umb-tab-buttons">
+                            <umb-button
+                                type="submit"
+                                action="latchPairing.unpair()"
+                                state="latchPairing.page.unpairButtonState"
+                                button-style="success"
+                                shortcut="ctrl+s"
+                                label="Unpair"
+                                label-key="latch_pairing_unpairButton">
+                            </umb-button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </umb-panel>
+</div>

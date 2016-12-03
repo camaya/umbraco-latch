@@ -1,0 +1,17 @@
+﻿{
+    javascript: [
+        '/App_Plugins/Latch/backoffice/common/latch.constants.js',
+        '/App_Plugins/Latch/backoffice/propertyeditors/dialogs/users.controller.js',
+        '/App_Plugins/Latch/backoffice/propertyeditors/userspicker.controller.js',
+        '/App_Plugins/Latch/backoffice/resources/application.resources.js',
+        '/App_Plugins/Latch/backoffice/resources/operation.resources.js',
+        '/App_Plugins/Latch/backoffice/latchsettings/pairing.controller.js',
+        '/App_Plugins/Latch/backoffice/latchsettings/application.controller.js',
+        '/App_Plugins/Latch/backoffice/latchoperations/edit.controller.js',
+        '/App_Plugins/Latch/backoffice/latchoperations/delete.controller.js'
+    ],
+    css: [
+        '/App_Plugins/Latch/assets/latch.css'
+    ]
+
+}
