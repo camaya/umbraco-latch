@@ -46,9 +46,14 @@ namespace UmbracoLatch.Core.PackageActions
                     orderAttribute.Value = (maxOrder + 1).ToString();
                     latchSectionNode.Attributes.Append(orderAttribute);
 
-                    // Add the new section
-                    var newSectionNode = applicationsNode.OwnerDocument.ImportNode(latchSectionNode, true);
-                    applicationsNode.AppendChild(newSectionNode);
+                    var sectionAlias = latchSectionNode.Attributes["alias"].Value;
+                    var existingSectionNode = applicationsNode.SelectSingleNode("//add[@alias = '" + sectionAlias + "']");
+                    if (existingSectionNode == null)
+                    {
+                        // Section not found, add it.
+                        var newSectionNode = applicationsNode.OwnerDocument.ImportNode(latchSectionNode, true);
+                        applicationsNode.AppendChild(newSectionNode);
+                    }
 
                     // Save the config file
                     applicationsConfigFile.Save(HttpContext.Current.Server.MapPath(applicationsConfigPath));
