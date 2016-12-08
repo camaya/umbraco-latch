@@ -4,4 +4,4 @@ Umbraco Latch is a package for the open source [Umbraco CMS](https://umbraco.com
 
 ## Documentation
 
-All you need to know about this package is in the documentation, you can read it here.
+All you need to know about this package is in the documentation, you can read it [here](https://umbracolatch.readme.io/docs).
