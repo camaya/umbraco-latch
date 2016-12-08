@@ -23,7 +23,7 @@ namespace UmbracoLatch.Core
         private void ConfigureUmbracoLatchSection(ApplicationContext applicationContext)
         {
             var sectionService = applicationContext.Services.SectionService;
-            var latchSection = sectionService.GetSections().SingleOrDefault(x => x.Name.Equals(LatchConstants.SectionAlias, StringComparison.InvariantCultureIgnoreCase));
+            var latchSection = sectionService.GetSections().FirstOrDefault(x => x.Name.Equals(LatchConstants.SectionAlias, StringComparison.InvariantCultureIgnoreCase));
             if (latchSection == null)
             {
                 sectionService.MakeNew(LatchConstants.SectionName, LatchConstants.SectionAlias, LatchConstants.SectionIcon);
