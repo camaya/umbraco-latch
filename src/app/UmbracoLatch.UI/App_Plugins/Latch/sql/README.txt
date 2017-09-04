@@ -1,0 +1,1 @@
+﻿Please do not change the name of these script files, they are used to create the UmbracoLatch tables during the Umbraco startup.

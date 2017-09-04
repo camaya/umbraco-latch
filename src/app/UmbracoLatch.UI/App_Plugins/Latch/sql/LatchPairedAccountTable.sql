@@ -1,0 +1,4 @@
+CREATE TABLE LatchPairedAccount(
+	UserId INT PRIMARY KEY NOT NULL,
+	AccountId NVARCHAR(80) NOT NULL 
+);
