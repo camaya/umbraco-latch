@@ -1,0 +1,14 @@
+﻿.show-validation-errors .invalid-value,
+.show-validation-errors .invalid-value .help-inline,
+.show-validation-errors .invalid-value label small,
+.show-validation-errors .invalid-value select {
+    color: #9d261d !important;
+}
+
+.show-validation-errors .ng-invalid select {
+    border: 1px solid #9d261d;
+}
+
+.latch-input {
+    width: 30%;
+}
