@@ -1,0 +1,25 @@
+﻿<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Our.Umbraco.Latch</id>
+    <version>1.0.0</version>
+    <title>Umbraco Latch</title>
+    <authors>Cristhian Amaya</authors>
+    <owners>Cristhian Amaya</owners>
+    <licenseUrl>https://github.com/camaya/umbraco-latch/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/camaya/umbraco-latch</projectUrl>
+    <iconUrl>https://our.umbraco.org/media/wiki/268040/636168119490559527_logopng.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Umbraco Latch integrates the Latch service within the backoffice, allowing you to protect different operations in the CMS.</description>
+    <tags>Umbraco Latch Security</tags>
+    <dependencies>
+      <dependency id="UmbracoCms.Core" version="7.4.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="App_Plugins\Latch\**\*.*" target="content\App_Plugins\Latch" />
+	  <file src="App_Plugins\Latch\assets\umbracolatch-icon.png" target="content\Umbraco\Images\Tray" />
+    <file src="..\UmbracoLatch.Core\bin\Release\UmbracoLatch.Core.dll" target="lib\net45" />
+    <file src="..\UmbracoLatch.Core\bin\Release\LatchSDK.dll" target="lib\net45" />
+  </files>
+</package>
